@@ -1,0 +1,98 @@
+"*":
+  Zen:
+    minimap: true
+    typewriter: true
+    width: 240
+  "atom-beautify":
+    general:
+      _analyticsUserId: "4dd2839f-a08f-4598-9dfb-147ee8271f06"
+    html: {}
+    php: {}
+  "autocomplete-python":
+    useKite: false
+  core:
+    audioBeep: false
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "welcome"
+      "timecop"
+      "language-yaml"
+      "language-xml"
+      "language-toml"
+      "language-sql"
+      "language-sass"
+      "language-ruby-on-rails"
+      "language-ruby"
+      "language-perl"
+      "language-objective-c"
+      "language-mustache"
+      "language-make"
+      "language-less"
+      "language-javascript"
+      "language-java"
+      "language-go"
+      "language-csharp"
+      "language-coffee-script"
+      "language-clojure"
+      "minimap-plus"
+      "language-python"
+    ]
+    projectHome: "/home/laser/git/"
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    fontFamily: "Iosevka"
+    fontSize: 11
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "7847bb02-2985-452f-bfe1-8e355337afec"
+  "highlight-line":
+    enableBackgroundColor: false
+    underline: "dashed"
+  "linter-flake8":
+    maxLineLength: 120
+  "linter-ui-default":
+    panelHeight: 56
+    showPanel: true
+  minimap:
+    displayMinimapOnLeft: true
+    plugins:
+      cursorline: false
+      cursorlineDecorationsZIndex: 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: false
+      linterDecorationsZIndex: 0
+    scrollAnimation: true
+  "minimap-linter": {}
+  "minimap-plus":
+    absoluteMode: true
+    displayMinimapOnLeft: true
+    scrollAnimation: true
+  "python-autopep8":
+    formatOnSave: true
+    maxLineLength: 120
+  "python-jedi":
+    Pathtopython: "python"
+  script:
+    cwdBehavior: "Project directory of the script"
+  "seti-syntax":
+    dynamicColor: false
+    themeColor: "Pink"
+  "seti-ui":
+    compactView: true
+    hideDocumentTitle: true
+    hideProjectTab: true
+    hideTitleBar: true
+    themeColor: "Pink"
+  welcome:
+    showOnStartup: false
