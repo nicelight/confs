@@ -42,15 +42,20 @@ function fish_prompt
     end
   end
 
+  if not set -q __fish_prompt_hostname
+    set -g __fish_prompt_hostname (hostname)
+  end
+
+
   set -l cyan (set_color -o cyan)
   set -l yellow (set_color -o yellow)
   set -l red (set_color -o red)
   set -l blue (set_color -o blue)
   set -l normal (set_color normal)
 
-  set -l arrow "$red➜ "
+  set -l arrow "$cyan$__fish_prompt_hostname$red➜ "
   if [ $USER = 'root' ]
-    set arrow "$red# "
+    set arrow "$cyan$__fish_prompt_hostname$red# "
   end
 
   set -l cwd $cyan(basename (prompt_pwd))
