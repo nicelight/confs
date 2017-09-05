@@ -56,7 +56,7 @@ if $_isxrunning; then
 
   [[ -f $HOME/.dircolors_256 ]] && eval $(dircolors -b $HOME/.dircolors_256)
 
-  export TERM='xterm-256color'
+  export TERM='screen-256color'
 
   B='\[\e[1;38;5;33m\]'
   LB='\[\e[1;38;5;81m\]'
