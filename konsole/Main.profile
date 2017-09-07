@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Linux
-Font=Ubuntu Mono,10,-1,5,50,0,0,0,0,0
+Font=Iosevka,10,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/bin/bash
