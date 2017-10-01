@@ -13,15 +13,14 @@ ShowMenuBarByDefault=false
 
 [MainWindow]
 Height 0=750
-Height 1080=750
+Height 1080=1060
 Height 768=750
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQmAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQ4AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 0=1366
 Width 1366=1366
-Width 1920=1366
-Window-Maximized 1080x1920=true
+Width 1920=605
 Window-Maximized 1920x1080=true
 Window-Maximized 768x1024=true
 Window-Maximized 768x1366=true
