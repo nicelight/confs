@@ -14,6 +14,17 @@
     audioBeep: false
     autoHideMenuBar: true
     closeDeletedFileTabs: true
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "welcome"
       "timecop"
@@ -36,7 +47,9 @@
       "language-clojure"
       "minimap-plus"
       "language-python"
+      "linter"
     ]
+    packagesWithKeymapsDisabled: []
     projectHome: "/home/laser/git/"
     telemetryConsent: "limited"
     themes: [
@@ -71,6 +84,8 @@
       "highlight-selectedDecorationsZIndex": 0
       linter: false
       linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
     scrollAnimation: true
   "minimap-linter": {}
   "minimap-plus":
@@ -121,5 +136,7 @@
     hideProjectTab: true
     hideTitleBar: true
     themeColor: "Pink"
+  "tool-bar":
+    position: "Right"
   welcome:
     showOnStartup: false

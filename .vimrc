@@ -11,13 +11,16 @@ set directory=~/.vim/swap
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
-set viminfo='100,\"500,:20,%,n~/.vim/viminfo
+set viminfo='100,\"500,:20,%,n~/.viminfo
 
 set tabstop=4
 set expandtab
 
+:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'Yggdroot/indentLine'
-
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
