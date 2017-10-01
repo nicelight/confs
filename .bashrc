@@ -1,4 +1,3 @@
 if [[ $- == *i* ]] && [ -x "$(command -v fish)" ]; then
-    exec fish 
+        exec fish
 fi
-
