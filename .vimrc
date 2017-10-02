@@ -24,13 +24,13 @@ set hlsearch
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 if !empty(glob('~/.vim/autoload/plug.vim'))
-  call plug#begin()
-  Plug 'tpope/vim-sensible'
-  Plug 'Yggdroot/indentLine'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  call plug#end()
+    call plug#begin()
+    Plug 'tpope/vim-sensible'
+    Plug 'Yggdroot/indentLine'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    call plug#end()
 
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline_theme='deus'
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline_theme='deus'
 endif
