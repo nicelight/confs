@@ -14,6 +14,7 @@ set undoreload=10000        " number of lines to save for undo
 set viminfo='100,\"500,:20,%,n~/.viminfo
 
 set tabstop=4
+set shiftwidth=4
 set expandtab
 
 set cursorline
@@ -22,12 +23,14 @@ set hlsearch
 
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-call plug#end()
+if !empty(glob('~/.vim/autoload/plug.vim'))
+  call plug#begin()
+  Plug 'tpope/vim-sensible'
+  Plug 'Yggdroot/indentLine'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  call plug#end()
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='deus'
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline_theme='deus'
+endif
