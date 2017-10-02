@@ -16,6 +16,10 @@ set viminfo='100,\"500,:20,%,n~/.viminfo
 set tabstop=4
 set expandtab
 
+set cursorline
+set number
+set hlsearch
+
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 call plug#begin()
