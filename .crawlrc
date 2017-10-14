@@ -87,7 +87,6 @@ char_set        = ascii
 remember_name   = true
 confirm_butcher = never
 
-restart_after_game = true
 view_max_width = 81
 view_max_height = 42
 wiz_mode = never
