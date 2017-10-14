@@ -1,8 +1,8 @@
 [Desktop Entry]
-DefaultProfile=Main.profile
+DefaultProfile=P1.profile
 
 [Favorite Profiles]
-Favorites=Main.profile
+Favorites=Profile 1.profile,P1.profile
 
 [FileLocation]
 scrollbackUseCacheLocation=true
@@ -13,14 +13,14 @@ ShowMenuBarByDefault=false
 
 [MainWindow]
 Height 0=750
-Height 1080=1060
+Height 1080=1080
 Height 768=750
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQ4AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 0=1366
 Width 1366=1366
-Width 1920=605
+Width 1920=1920
 Window-Maximized 1920x1080=true
 Window-Maximized 768x1024=true
 Window-Maximized 768x1366=true
