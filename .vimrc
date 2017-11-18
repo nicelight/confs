@@ -37,6 +37,7 @@ Plug 'tpope/vim-sensible'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'chr4/nginx.vim'
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
