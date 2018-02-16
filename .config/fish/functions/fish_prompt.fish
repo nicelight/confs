@@ -53,9 +53,9 @@ function fish_prompt
   set -l blue (set_color -o blue)
   set -l normal (set_color normal)
 
-  set -l arrow "$cyan$__fish_prompt_hostname$red➜ "
+  set -l heart_and_hostname "$cyan$__fish_prompt_hostname$red ❤ "
   if [ $USER = 'root' ]
-    set arrow "$cyan$__fish_prompt_hostname$red# "
+    set heart_and_hostname "$cyan$__fish_prompt_hostname$red# "
   end
 
   set -l cwd $cyan(basename (prompt_pwd))
@@ -71,5 +71,5 @@ function fish_prompt
     end
   end
 
-  echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+  echo -n -s $heart_and_hostname ' '$cwd $repo_info $normal ' '
 end
