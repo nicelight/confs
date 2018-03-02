@@ -13,6 +13,7 @@ set undodir=$HOME/.vim/undo " where to save undo histories
 set directory=$HOME/.vim/swap
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
+set mouse=a
 
 set viminfo='100,\"500,:20,%,n~/.viminfo
 
