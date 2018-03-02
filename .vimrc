@@ -4,9 +4,9 @@ silent !mkdir -p ~/.vim/swap
 set backspace=2         " backspace in insert mode works like normal editor
 syntax on               " syntax highlighting
 filetype indent on      " activates indenting for files
-set autoindent          " auto indenting
+set autoindent
 set number              " line numbers
-colorscheme desert      " colorscheme desert
+colorscheme desert
 set nobackup            " get rid of anoying ~file
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
@@ -26,6 +26,9 @@ set number
 set hlsearch
 
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <silent> <CR> :noh<CR>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
