@@ -1,11 +1,14 @@
 [Appearance]
-ColorScheme=DarkPastels
-Font=Iosevka,10,-1,5,50,0,0,0,0,0
+AntiAliasFonts=true
+BoldIntense=true
+ColorScheme=Linux
+Font=Iosevka,9,-1,5,50,0,0,0,0,0
+UseFontLineChararacters=true
 
 [General]
 Command=/bin/bash
 Environment=TERM=xterm-256color
-Name=P1
+Name=main
 Parent=FALLBACK/
 
 [Interaction Options]
