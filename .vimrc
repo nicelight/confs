@@ -43,6 +43,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chr4/nginx.vim'
 Plug 'mbbill/undotree'
+Plug 'airblade/vim-matchquote'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
