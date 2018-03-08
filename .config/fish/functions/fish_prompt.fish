@@ -39,7 +39,7 @@ function fish_prompt
     set -l blue (set_color -o blue)
     set -l normal (set_color normal)
 
-    set -l heart_and_hostname "$cyan$__fish_prompt_hostname$red ❤ "
+    set -l heart_and_hostname "$cyan$__fish_prompt_hostname$red ❤"
     
     if [ $USER = 'root' ]
         set heart_and_hostname "$cyan$__fish_prompt_hostname$red# "
