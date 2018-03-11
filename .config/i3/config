@@ -18,6 +18,11 @@ bindsym $mod+Shift+colon kill
 bindsym $mod+e exec --no-startup-id albert show
 bindsym $mod+l exec --no-startup-id xautolock -locknow
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -105,3 +110,11 @@ mode "resize" {
 }
 
 bindsym $mod+p mode "resize"
+
+bar {
+    status_command i3status
+
+    mode hide
+    hidden_state hide
+    modifier $mod
+}
