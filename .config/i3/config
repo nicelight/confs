@@ -15,12 +15,12 @@ for_window [class="^.*"] border pixel 3
 
 for_window [class="albert"] border pixel 0
 for_window [class="kitty"] border pixel 0
+for_window [class="Uzbl-core"] border normal
 
 workspace_auto_back_and_forth yes
 
 gaps inner 5
 gaps outer 5
-smart_gaps on
 
 # class                 border  bground text    indicator child_border
 client.focused          #000000 #000000 #FFFFFF #000000   #000000
