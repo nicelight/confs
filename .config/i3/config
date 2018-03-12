@@ -21,6 +21,7 @@ workspace_auto_back_and_forth yes
 
 gaps inner 5
 gaps outer 5
+smart_gaps on
 
 # class                 border  bground text    indicator child_border
 client.focused          #000000 #000000 #FFFFFF #000000   #000000
@@ -42,7 +43,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Take a screenshot
-bindsym --release Print exec "scrot -m '~/Pictures/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Print exec "scrot -m ~/Pictures/%s_%H%M_%d.%m.%Y_\$wx\$h.png"
 bindsym --release Shift+Print exec "scrot -s '~/Pictures/%s_%H%M_%d%m%Y_$wx$h.png'"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
