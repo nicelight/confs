@@ -11,9 +11,14 @@ exec --no-startup-id dropbox start
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
 exec --no-startup-id kitty
 
+for_window [class="^.*"] border pixel 3
+for_window [class="albert"] border pixel 0
+
+new_window normal 3 px
 workspace_auto_back_and_forth yes
-workspace_layout tabbed
-new_window normal 0 px
+
+gaps inner 5
+gaps outer 5
 
 bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Shift+colon kill
@@ -34,20 +39,41 @@ floating_modifier $mod
 
 # change focus
 bindsym $mod+h focus left
+bindsym $mod+t focus down
+bindsym $mod+n focus up
 bindsym $mod+s focus right
 
 # move focused window
 bindsym $mod+Shift+H move left
+bindsym $mod+Shift+T move down
+bindsym $mod+Shift+N move up
 bindsym $mod+Shift+S move right
+
+# split in horizontal orientation
+bindsym $mod+d split h
+
+# split in vertical orientation
+bindsym $mod+k split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+u fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+o layout stacking
+bindsym $mod+comma layout tabbed
+bindsym $mod+period layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+ampersand workspace 1
@@ -73,15 +99,30 @@ bindsym $mod+Shift+2 move container to workspace 8
 bindsym $mod+Shift+4 move container to workspace 9
 bindsym $mod+Shift+6 move container to workspace 10
 
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym t resize grow height 10 px or 10 ppt
+        bindsym n resize shrink height 10 px or 10 ppt
+        bindsym s resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "resize"
+
 bindsym $mod+Shift+J reload
 bindsym $mod+Shift+P restart
 
 bar {
     status_command i3status
-
-    mode hide
-    hidden_state hide
-    modifier $mod
-    
     font pango:hack 8
 }
