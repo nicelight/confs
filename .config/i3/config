@@ -80,7 +80,6 @@ bar {
 
     mode hide
     hidden_state hide
-    position top
     modifier $mod
     
     font pango:hack 8
