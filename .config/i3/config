@@ -5,7 +5,7 @@ exec --no-startup-id albert
 exec --no-startup-id xcompmgr -c -f -n -D 2
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id slock
-exec --no-startup-id feh --bg-fill ~/Pictures/vTMGurl.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wall1.jpg
 exec --no-startup-id xautolock -time 5 -locker "slock xset dpms force off" -corners -000
 exec --no-startup-id dropbox start
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
@@ -123,6 +123,12 @@ bindsym $mod+Shift+J reload
 bindsym $mod+Shift+P restart
 
 bar {
+    i3bar_command i3bar -t
     status_command i3status
+
     font pango:hack 8
+
+    colors {
+        background #000000B3
+    }
 }
