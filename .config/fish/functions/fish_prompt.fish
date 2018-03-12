@@ -54,7 +54,7 @@ function fish_prompt
 
         if [ (_is_repo_dirty $repo_type) ]
             set -l dirty "✗"
-            set repo_info "$repo_info$dirty"
+            set repo_info "$repo_info $dirty"
         end
     end
 
