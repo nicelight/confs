@@ -2,7 +2,7 @@ set $mod Mod4
 font pango:hack 8
 
 exec --no-startup-id albert
-exec --no-startup-id compton -c -f -D 2 -i 0.75 -o 0
+exec --no-startup-id compton -b -d :0 -c -f -D 2 -i 0.75 -o 0 --focus-exclude "! class_g *?= 'kitty'"
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/1.jpg
 exec --no-startup-id xautolock -time 5 -locker "~/.config/i3/bin/lock" -corners -000
