@@ -45,18 +45,18 @@ function fish_prompt
         set heart_and_hostname "$cyan$__fish_prompt_hostname$red# "
     end
 
-    set -l cwd $cyan(basename (prompt_pwd))
+    set -l cwd (basename (prompt_pwd))
 
     set -l repo_type (_repo_type)
     if [ $repo_type ]
-        set -l repo_branch $red(_repo_branch_name $repo_type)
-        set repo_info "$blue $repo_type:($repo_branch$blue)"
+        set -l repo_branch (_repo_branch_name $repo_type)
+        set repo_info " $repo_type:($repo_branch)"
 
         if [ (_is_repo_dirty $repo_type) ]
-            set -l dirty "$yellow ✗"
+            set -l dirty "✗"
             set repo_info "$repo_info$dirty"
         end
     end
 
-    echo -n -s $heart_and_hostname ' '$cwd $repo_info $normal ' '
+    echo -n -s $cwd $repo_info $normal ' >>> '
 end
