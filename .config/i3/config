@@ -2,7 +2,7 @@ set $mod Mod4
 font pango:hack 8
 
 exec --no-startup-id albert
-exec --no-startup-id compton -c -f -D 2 -i 0.6 -o 0
+exec --no-startup-id compton -c -f -D 2 -i 0.75 -o 0
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id slock
 exec --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/wall1.jpg
