@@ -2,7 +2,7 @@ set $mod Mod4
 font pango:hack 8
 
 exec --no-startup-id albert
-exec --no-startup-id xcompmgr -c -f -n -D 2
+exec --no-startup-id compton -c -f -D 2 -i 0.6 -o 0
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id slock
 exec --no-startup-id feh --bg-fill ~/Pictures/wall1.jpg
@@ -12,9 +12,10 @@ exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapBut
 exec --no-startup-id kitty
 
 for_window [class="^.*"] border pixel 3
-for_window [class="albert"] border pixel 0
 
-new_window normal 3 px
+for_window [class="albert"] border pixel 0
+for_window [class="kitty"] border pixel 0
+
 workspace_auto_back_and_forth yes
 
 gaps inner 5
