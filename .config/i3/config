@@ -1,21 +1,17 @@
 set $mod Mod4
 font pango:hack 8
 
-exec --no-startup-id albert
+exec --no-startup-id xautolock -time 5 -locker "~/.config/i3/bin/lock" -corners -000
+exec --no-startup-id sleep 0.5; xautolock -locknow
+
 exec --no-startup-id compton -b -d :0 -c -f -D 2 -i 0.75 -o 0 --focus-exclude "! class_g *?= 'kitty'"
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/1.jpg
-exec --no-startup-id xautolock -time 5 -locker "~/.config/i3/bin/lock" -corners -000
 exec --no-startup-id dropbox start
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
 
-exec --no-startup-id sleep 1; xautolock -locknow
-
 for_window [class="^.*"] border pixel 3
-
-for_window [class="albert"] border pixel 0
 for_window [class="kitty"] border pixel 0
-for_window [class="Uzbl-core"] border normal
 
 workspace_auto_back_and_forth yes
 
@@ -33,7 +29,7 @@ client.background       #FFFFFF
 
 bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Shift+colon kill
-bindsym $mod+e exec --no-startup-id albert show
+bindsym $mod+e exec --no-startup-id "rofi -combi-modi window,drun,run -font 'hack 8' -show combi -show-icons -terminal kitty -color-window '#000000, #000000, #000000' -color-normal '#000000, #CCCCCC, #000000, #333333, #CCCCCC'"
 bindsym $mod+l exec --no-startup-id xautolock -locknow
 
 # Pulse Audio controls
