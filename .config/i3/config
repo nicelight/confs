@@ -8,6 +8,7 @@ exec --no-startup-id compton -b -d :0 -c -f -D 2 -i 0.75 -o 0 --focus-exclude "!
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id feh --bg-fill ~/.config/i3/Wallpapers/1.jpg
 exec --no-startup-id dropbox start
+exec --no-startup-id xset dpms 0 0 0
 
 for_window [class="^.*"] border pixel 3
 for_window [class="kitty"] border pixel 0

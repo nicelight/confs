@@ -31,3 +31,8 @@ $SCREENSHOT
 convert $IMAGE -blur $BLURTYPE $IMAGE
 i3lock -i $IMAGE
 rm $IMAGE
+
+sleep 60
+if [ "x$(pgrep i3lock)" != "x" ]; then
+    xset dpms force off
+fi
